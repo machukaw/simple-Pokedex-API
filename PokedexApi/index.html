@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MachuDex</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <h1 class="title">Pokedex</h1>
+
+  <!-- SEARCH AND FILTER -->
+  <div class="filter-bar">
+    <select id="generationFilter">
+      <option value="all">All Generations</option>
+      <option value="1">Gen 1</option>
+      <option value="2">Gen 2</option>
+      <option value="3">Gen 3</option>
+    </select>
+
+    <input type="text" id="searchBar" placeholder="Search Pokémon..." />
+
+    <select id="sortType">
+      <option value="number">By Number</option>
+      <option value="name">Alphabetical</option>
+      <option value="type">By Type</option>
+    </select>
+  </div>
+
+  <!-- POKEDEX CONTAINER -->
+  <div id="pokedex" class="pokedex"></div>
+
+  <!-- POEKMON MODAL -->
+  <div id="modal" class="modal hidden">
+    <div class="modal-content">
+      <button id="closeModal">&times;</button>
+      <div id="modalDetails"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
