@@ -5,6 +5,7 @@ const closeModal = document.getElementById('closeModal');
 const searchBar = document.getElementById('searchBar');
 const generationFilter = document.getElementById('generationFilter');
 const sortType = document.getElementById('sortType');
+const loading = document.getElementById('loading');
 
 let allPokemon = [];
 
@@ -15,6 +16,8 @@ const generationRanges = {
 };
 
 async function fetchAllPokemon() {
+  loading.classList.remove('hidden');
+
   const res = await fetch('https://pokeapi.co/api/v2/pokemon?limit=386');
   const data = await res.json();
   const results = data.results;
@@ -26,6 +29,7 @@ async function fetchAllPokemon() {
   }
 
   renderPokemon();
+  loading.classList.add('hidden');
 }
 
 function renderPokemon() {

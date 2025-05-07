@@ -45,6 +45,15 @@ input[type="text"] {
   width: 250px;
 }
 
+/* LOADING */
+.loading {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 2rem;
+  color: #FFD700;
+}
+
 /* POKEDEX CONTAINER */
 .pokedex {
   display: grid;
